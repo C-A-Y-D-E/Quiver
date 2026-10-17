@@ -1,0 +1,29 @@
+// Windows resources for keyvault.exe: the app icon (ID 1 - GPUI loads it for
+// the window and taskbar) and the file's version details.
+// build.rs fills in the @...@ placeholders and compiles a copy of this file.
+1 ICON "@ICON@"
+
+1 VERSIONINFO
+FILEVERSION     @MAJOR@,@MINOR@,@PATCH@,0
+PRODUCTVERSION  @MAJOR@,@MINOR@,@PATCH@,0
+FILEOS          0x40004
+FILETYPE        0x1
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "CompanyName",      "KeyVault"
+      VALUE "FileDescription",  "KeyVault"
+      VALUE "FileVersion",      "@VERSION@"
+      VALUE "InternalName",     "keyvault"
+      VALUE "OriginalFilename", "KeyVault.exe"
+      VALUE "ProductName",      "KeyVault"
+      VALUE "ProductVersion",   "@VERSION@"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1200
+  END
+END
